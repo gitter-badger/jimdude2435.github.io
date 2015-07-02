@@ -39,18 +39,20 @@ public class Inverses
             }
             else
             {
-                System.out.print("y = " + coefficient + "(x+" + inside + ")²");
-                if (outside < 0)
-                {
-                    int newoutside = outside * (-1);
-                    System.out.println(" - " + newoutside);
-                }
-                {
-                    System.out.println(" + " + outside);
-                }
+                System.out.print("+" + inside + ")²");
             }
-            
-            System.out.println("If so, your inverse looks like this: ");
+
+            if (outside < 0)
+            {
+                newoutside = outside * (-1);
+                System.out.print(" - " + newoutside);
+            }
+            else
+            {
+                System.out.print(" + " + outside);
+            }
+
+            System.out.println("\nIf so, your inverse looks like this: ");
             if (coefficient > 0)
             {
                 System.out.print("x = -" + coefficient + "√y");
